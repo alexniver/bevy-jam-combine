@@ -1,1 +1,6 @@
 /target
+/wasm
+/windows
+.VSCodeCounter/
+windows.zip
+wasm.zip
