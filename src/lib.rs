@@ -17,6 +17,7 @@ pub mod logic_selector_plugin;
 pub mod logic_tree_little_plugin;
 pub mod logic_tree_plugin;
 pub mod logic_worm_plugin;
+pub mod path_finding;
 pub mod solar_panel_plugin;
 pub mod spawn_tilemap_plugin;
 pub mod tile_chick_plugin;

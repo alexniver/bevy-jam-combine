@@ -63,6 +63,11 @@ pub struct TileWorm;
 #[derive(Component)]
 pub struct TileSelector;
 
+#[derive(Component)]
+pub struct LockInWorm(pub u32, pub u32); // chick/chicken 锁定worm, location
+#[derive(Component)]
+pub struct WormBeenLocked; // worm 已经被锁定
+
 pub const LAYER_Z_SAND: f32 = 0.01;
 pub const LAYER_Z_SAND_SOLID: f32 = 0.02;
 pub const LAYER_Z_GRASS: f32 = 0.03;
