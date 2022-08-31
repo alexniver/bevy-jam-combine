@@ -11,10 +11,13 @@ use desert_terminator::helper_plugin::HelperPlugin;
 use desert_terminator::logic_chick_plugin::LogicChickPlugin;
 use desert_terminator::logic_chicken_plugin::LogicChickenPlugin;
 use desert_terminator::logic_grass_plugin::LogicGrassPlugin;
+use desert_terminator::logic_grass_solid_plugin::LogicGrassSolidPlugin;
 use desert_terminator::logic_sand_plugin::LogicSandPlugin;
+use desert_terminator::logic_sand_solid_plugin::LogicSandSolidPlugin;
 use desert_terminator::logic_selector_plugin::LogicSelectorPlugin;
 use desert_terminator::logic_tree_little_plugin::LogicTreeLittlePlugin;
 use desert_terminator::logic_tree_plugin::LogicTreePlugin;
+use desert_terminator::logic_worm_plugin::LogicWormPlugin;
 use desert_terminator::spawn_tilemap_plugin::SpawnPlugin;
 use desert_terminator::tile_chick_plugin::TileChickPlugin;
 use desert_terminator::tile_chicken_plugin::TileChickenPlugin;
@@ -65,11 +68,14 @@ fn main() {
         .add_plugin(HelperPlugin)
         .add_plugin(LogicSelectorPlugin)
         .add_plugin(LogicSandPlugin)
+        .add_plugin(LogicSandSolidPlugin)
         .add_plugin(LogicGrassPlugin)
+        .add_plugin(LogicGrassSolidPlugin)
         .add_plugin(LogicChickPlugin)
         .add_plugin(LogicChickenPlugin)
         .add_plugin(LogicTreeLittlePlugin)
         .add_plugin(LogicTreePlugin)
+        .add_plugin(LogicWormPlugin)
         .add_plugin(BuildPlugin)
         // .add_plugin(SolarPanelPlugin)
         .add_plugin(SpawnPlugin)

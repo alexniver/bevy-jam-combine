@@ -45,13 +45,13 @@ pub struct TileGrassSolid(pub u32); // days left
 #[derive(Component)]
 pub struct TileTreeLittle(pub u32, pub i32); // growup left days, hp
 #[derive(Component)]
-pub struct TileTree(pub u32); // hp
+pub struct TileTree(pub i32); // hp
 #[derive(Component)]
 pub struct TileSolarPanel;
 #[derive(Component)]
 pub struct TileSolarPanelGrass;
 #[derive(Component)]
-pub struct TileChick;
+pub struct TileChick(pub u32);
 #[derive(Component)]
 pub struct TileChicken;
 #[derive(Component)]
@@ -81,7 +81,13 @@ pub const LAYER_Z_SELECTOR: f32 = 0.14;
 pub const SAND_SOLID_DAYS: u32 = 6 * 30;
 pub const GRASS_SOLID_DAYS: u32 = 6 * 30;
 
-pub const TREE_HP: u32 = 100000;
-// pub const TREE_LITTLE_GROW_DAYS: u32 = 5;
-pub const TREE_LITTLE_GROW_DAYS: u32 = 8 * 30;
-pub const TREE_LITTLE_HP: i32 = 180;
+pub const TREE_HP: i32 = 100000;
+pub const TREE_LITTLE_GROW_DAYS: u32 = 5;
+// pub const TREE_LITTLE_GROW_DAYS: u32 = 8 * 30;
+// pub const TREE_LITTLE_HP: i32 = 180 * 5;
+pub const TREE_LITTLE_HP: i32 = 8 * 5;
+
+// pub const CHICK_GROW_DAYS: u32 = 3 * 30;
+pub const CHICK_GROW_DAYS: u32 = 5;
+
+pub const WORM_SPAWN_CHANCE: f64 = 1.0 / 3.0;

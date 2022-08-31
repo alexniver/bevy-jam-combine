@@ -21,7 +21,7 @@ impl Plugin for GameDatePlugin {
             .add_stage_before(
                 CoreStage::Update,
                 "FixedUpdate",
-                FixedTimestepStage::from_stage(Duration::from_millis(5 * 1000), fixedupdate),
+                FixedTimestepStage::from_stage(Duration::from_millis(1000), fixedupdate),
             )
             .add_system(date_ui);
     }

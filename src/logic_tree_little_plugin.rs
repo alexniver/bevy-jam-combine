@@ -59,7 +59,7 @@ fn damage_by_sand(
 
     let t_storage_sand = q_storage_sand.single();
     for (mut tile_tree_little, tile_pos) in q_grass.iter_mut() {
-        let mut neighbour_pos_arr = vec![];
+        let mut neighbour_pos_arr = vec![tile_pos.clone()];
         if tile_pos.x > 0 {
             neighbour_pos_arr.push(TilePos {
                 x: tile_pos.x - 1,

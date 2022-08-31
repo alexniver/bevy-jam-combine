@@ -35,18 +35,14 @@ pub struct SoldAllEvent(pub u32, pub u32);
 // build index, 0 means none
 struct BuildIndex(u8);
 
-const BUILD_LIST: [&str; 2] = [
+const BUILD_LIST: [&str; 7] = [
     "1. reinforce sand [5]",
     "2. plant tree [10]",
-    // "3. a chick [5]",
-    // "4. a lamb [50]",
-    // "5. solar panel [1000]",
-    // "4. recovery tree[100]/solar panel[500]",
-    // "6. recovery tree[100]/solar panel[500]",
-    // "5. sold all chicken[50]",
-    // "7. sold all chicken[50]/sheep[1000]",
-    // "8. ",
-    // "9. ",
+    "3. a chick [5]",
+    "4. a lamb [50]",
+    "5. solar panel [1000]",
+    "6. recovery tree[100]/solar panel[500]",
+    "7. sold all chicken[50]/sheep[1000]",
 ];
 
 fn build_trigger(
@@ -87,9 +83,9 @@ fn build_trigger(
         } else if keyboard_res.just_pressed(KeyCode::Key5) {
             build_index.0 = 5;
         } else if keyboard_res.just_pressed(KeyCode::Key6) {
-            // build_index.0 = 6;
+            build_index.0 = 6;
         } else if keyboard_res.just_pressed(KeyCode::Key7) {
-            // build_index.0 = 7;
+            build_index.0 = 7;
         } else if keyboard_res.just_pressed(KeyCode::Key8) {
             // build_index.0 = 8;
         } else if keyboard_res.just_pressed(KeyCode::Key9) {
@@ -154,7 +150,7 @@ fn build_trigger(
         buildui_entity_commands.with_children(|parent| {
             let mut top = 0.;
             for (idx, build_str) in BUILD_LIST.iter().enumerate() {
-                if idx > 5 {
+                if idx > 8 {
                     break;
                 }
                 let mut text_style = text_style_normal.clone();

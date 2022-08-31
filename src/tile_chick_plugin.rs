@@ -77,7 +77,7 @@ fn spawn_tile(
                 tilemap_id: TilemapId(tilemap_entity),
                 ..Default::default()
             })
-            .insert(TileChick)
+            .insert(TileChick(CHICK_GROW_DAYS))
             .id();
         tile_storage.set(&tile_pos, Some(tile_entity));
     }
